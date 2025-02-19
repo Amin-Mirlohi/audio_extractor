@@ -1,0 +1,8 @@
+2025-02-18T19:27:38.432970 - START: 0-Session 21_ Debt Design.mp4
+2025-02-18T19:27:55.826249 - END: 0-Session 21_ Debt Design.mp4
+2025-02-18T19:27:55.826797 - START: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18T19:28:07.035131 - END: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18T19:28:07.035579 - START: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18T19:28:21.097347 - END: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18T19:28:21.097895 - START: 1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18T19:29:12.487906 - END: 1192-Session 2_ The Objective in Corporate Finance.mp4

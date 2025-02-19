@@ -1,0 +1,307 @@
+2025-02-18 18:57:09,920 [INFO] app_logger - Processing video file: 0-Session 21_ Debt Design.mp4
+2025-02-18 18:57:09,924 [INFO] app_logger - Downloading 0-Session 21_ Debt Design.mp4 from bucket video-audio-test...
+2025-02-18 18:57:21,559 [INFO] app_logger - Successfully downloaded 0-Session 21_ Debt Design.mp4 to /tmp/video_processing/0-Session 21_ Debt Design.mp4
+2025-02-18 18:57:21,560 [INFO] app_logger - Extracting audio from /tmp/video_processing/0-Session 21_ Debt Design.mp4...
+2025-02-18 18:57:21,560 [ERROR] app_logger - Audio extraction failed for 0-Session 21_ Debt Design.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 18, in extract_audio
+    ffmpeg.input(input_file_path)
+AttributeError: module 'ffmpeg' has no attribute 'input'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 26, in extract_audio
+    except ffmpeg.Error as e:
+AttributeError: module 'ffmpeg' has no attribute 'Error'
+2025-02-18 18:57:21,565 [INFO] app_logger - Processing video file: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 18:57:21,568 [INFO] app_logger - Downloading 1-Valeant_ Information Vacuums, Management Credib.mp4 from bucket video-audio-test...
+2025-02-18 18:57:27,740 [INFO] app_logger - Successfully downloaded 1-Valeant_ Information Vacuums, Management Credib.mp4 to /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 18:57:27,741 [INFO] app_logger - Extracting audio from /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4...
+2025-02-18 18:57:27,741 [ERROR] app_logger - Audio extraction failed for 1-Valeant_ Information Vacuums, Management Credib.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 18, in extract_audio
+    ffmpeg.input(input_file_path)
+AttributeError: module 'ffmpeg' has no attribute 'input'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 26, in extract_audio
+    except ffmpeg.Error as e:
+AttributeError: module 'ffmpeg' has no attribute 'Error'
+2025-02-18 18:57:27,744 [INFO] app_logger - Processing video file: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 18:57:27,756 [INFO] app_logger - Downloading 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 from bucket video-audio-test...
+2025-02-18 18:57:37,324 [INFO] app_logger - Successfully downloaded 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 to /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 18:57:37,326 [INFO] app_logger - Extracting audio from /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4...
+2025-02-18 18:57:37,326 [ERROR] app_logger - Audio extraction failed for 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 18, in extract_audio
+    ffmpeg.input(input_file_path)
+AttributeError: module 'ffmpeg' has no attribute 'input'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 26, in extract_audio
+    except ffmpeg.Error as e:
+AttributeError: module 'ffmpeg' has no attribute 'Error'
+2025-02-18 18:57:37,336 [INFO] app_logger - Processing video file: 1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 18:57:37,340 [INFO] app_logger - Downloading 1192-Session 2_ The Objective in Corporate Finance.mp4 from bucket video-audio-test...
+2025-02-18 18:58:13,269 [INFO] app_logger - Successfully downloaded 1192-Session 2_ The Objective in Corporate Finance.mp4 to /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 18:58:13,272 [INFO] app_logger - Extracting audio from /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4...
+2025-02-18 18:58:13,272 [ERROR] app_logger - Audio extraction failed for 1192-Session 2_ The Objective in Corporate Finance.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 18, in extract_audio
+    ffmpeg.input(input_file_path)
+AttributeError: module 'ffmpeg' has no attribute 'input'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 26, in extract_audio
+    except ffmpeg.Error as e:
+AttributeError: module 'ffmpeg' has no attribute 'Error'
+2025-02-18 18:58:13,293 [INFO] app_logger - Processing complete.
+2025-02-18 19:07:58,650 [INFO] app_logger - Processing video file: 0-Session 21_ Debt Design.mp4
+2025-02-18 19:07:58,654 [INFO] app_logger - Downloading 0-Session 21_ Debt Design.mp4 from bucket video-audio-test...
+2025-02-18 19:08:13,161 [INFO] app_logger - Successfully downloaded 0-Session 21_ Debt Design.mp4 to /tmp/video_processing/0-Session 21_ Debt Design.mp4
+2025-02-18 19:08:13,162 [INFO] app_logger - Extracting audio from /tmp/video_processing/0-Session 21_ Debt Design.mp4...
+2025-02-18 19:08:13,168 [ERROR] app_logger - Audio extraction failed for 0-Session 21_ Debt Design.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:08:13,169 [INFO] app_logger - Processing video file: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:08:13,174 [INFO] app_logger - Downloading 1-Valeant_ Information Vacuums, Management Credib.mp4 from bucket video-audio-test...
+2025-02-18 19:08:21,215 [INFO] app_logger - Successfully downloaded 1-Valeant_ Information Vacuums, Management Credib.mp4 to /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:08:21,217 [INFO] app_logger - Extracting audio from /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4...
+2025-02-18 19:08:21,224 [ERROR] app_logger - Audio extraction failed for 1-Valeant_ Information Vacuums, Management Credib.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:08:21,225 [INFO] app_logger - Processing video file: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:08:21,237 [INFO] app_logger - Downloading 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 from bucket video-audio-test...
+2025-02-18 19:08:34,646 [INFO] app_logger - Successfully downloaded 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 to /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:08:34,649 [INFO] app_logger - Extracting audio from /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4...
+2025-02-18 19:08:34,658 [ERROR] app_logger - Audio extraction failed for 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:08:34,658 [INFO] app_logger - Processing video file: 1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:08:34,666 [INFO] app_logger - Downloading 1192-Session 2_ The Objective in Corporate Finance.mp4 from bucket video-audio-test...
+2025-02-18 19:09:19,346 [INFO] app_logger - Successfully downloaded 1192-Session 2_ The Objective in Corporate Finance.mp4 to /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:09:19,347 [INFO] app_logger - Extracting audio from /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4...
+2025-02-18 19:09:19,351 [ERROR] app_logger - Audio extraction failed for 1192-Session 2_ The Objective in Corporate Finance.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:09:19,351 [INFO] app_logger - Processing complete.
+2025-02-18 19:12:55,514 [INFO] app_logger - Processing video file: 0-Session 21_ Debt Design.mp4
+2025-02-18 19:12:55,519 [INFO] app_logger - Downloading 0-Session 21_ Debt Design.mp4 from bucket video-audio-test...
+2025-02-18 19:13:08,335 [INFO] app_logger - Successfully downloaded 0-Session 21_ Debt Design.mp4 to /tmp/video_processing/0-Session 21_ Debt Design.mp4
+2025-02-18 19:13:08,337 [INFO] app_logger - Extracting audio from /tmp/video_processing/0-Session 21_ Debt Design.mp4...
+2025-02-18 19:13:08,343 [ERROR] app_logger - Audio extraction failed for 0-Session 21_ Debt Design.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:13:08,345 [INFO] app_logger - Processing video file: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:13:08,349 [INFO] app_logger - Downloading 1-Valeant_ Information Vacuums, Management Credib.mp4 from bucket video-audio-test...
+2025-02-18 19:13:16,810 [INFO] app_logger - Successfully downloaded 1-Valeant_ Information Vacuums, Management Credib.mp4 to /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:13:16,812 [INFO] app_logger - Extracting audio from /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4...
+2025-02-18 19:13:16,816 [ERROR] app_logger - Audio extraction failed for 1-Valeant_ Information Vacuums, Management Credib.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:13:16,817 [INFO] app_logger - Processing video file: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:13:16,836 [INFO] app_logger - Downloading 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 from bucket video-audio-test...
+2025-02-18 19:13:28,593 [INFO] app_logger - Successfully downloaded 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 to /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:13:28,625 [INFO] app_logger - Extracting audio from /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4...
+2025-02-18 19:13:28,632 [ERROR] app_logger - Audio extraction failed for 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:13:28,633 [INFO] app_logger - Processing video file: 1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:13:28,639 [INFO] app_logger - Downloading 1192-Session 2_ The Objective in Corporate Finance.mp4 from bucket video-audio-test...
+2025-02-18 19:14:14,865 [INFO] app_logger - Successfully downloaded 1192-Session 2_ The Objective in Corporate Finance.mp4 to /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:14:14,892 [INFO] app_logger - Extracting audio from /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4...
+2025-02-18 19:14:14,896 [ERROR] app_logger - Audio extraction failed for 1192-Session 2_ The Objective in Corporate Finance.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:14:14,896 [INFO] app_logger - Processing complete.
+2025-02-18 19:17:50,144 [INFO] app_logger - Processing video file: 0-Session 21_ Debt Design.mp4
+2025-02-18 19:17:50,147 [INFO] app_logger - Downloading 0-Session 21_ Debt Design.mp4 from bucket video-audio-test...
+2025-02-18 19:18:05,389 [INFO] app_logger - Successfully downloaded 0-Session 21_ Debt Design.mp4 to /tmp/video_processing/0-Session 21_ Debt Design.mp4
+2025-02-18 19:18:05,391 [INFO] app_logger - Extracting audio from /tmp/video_processing/0-Session 21_ Debt Design.mp4...
+2025-02-18 19:18:05,394 [ERROR] app_logger - Audio extraction failed for 0-Session 21_ Debt Design.mp4
+Traceback (most recent call last):
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/main.py", line 60, in main
+    extract_audio(local_video_path, local_audio_path, app_logger)
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/video_processor/audio_extractor.py", line 23, in extract_audio
+    .run()
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 313, in run
+    process = run_async(
+  File "/Users/amin/Desktop/AI_Agents/Damodoran_chatbot/.venv/lib/python3.10/site-packages/ffmpeg/_run.py", line 284, in run_async
+    return subprocess.Popen(
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 969, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/opt/homebrew/Caskroom/miniforge/base/lib/python3.10/subprocess.py", line 1845, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'ffmpeg'
+2025-02-18 19:18:05,398 [INFO] app_logger - Processing video file: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:18:05,410 [INFO] app_logger - Downloading 1-Valeant_ Information Vacuums, Management Credib.mp4 from bucket video-audio-test...
+2025-02-18 19:18:30,469 [ERROR] app_logger - Failed to list objects in video-audio-test: An error occurred (AccessDenied) when calling the ListObjectsV2 operation: Access Denied
+2025-02-18 19:18:50,145 [INFO] app_logger - Processing video file: 0-Session 21_ Debt Design.mp4
+2025-02-18 19:18:50,149 [INFO] app_logger - Downloading 0-Session 21_ Debt Design.mp4 from bucket video-audio-test...
+2025-02-18 19:19:03,281 [INFO] app_logger - Successfully downloaded 0-Session 21_ Debt Design.mp4 to /tmp/video_processing/0-Session 21_ Debt Design.mp4
+2025-02-18 19:19:03,284 [INFO] app_logger - Extracting audio from /tmp/video_processing/0-Session 21_ Debt Design.mp4...
+2025-02-18 19:19:11,537 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/0-Session 21_ Debt Design.m4a
+2025-02-18 19:19:11,549 [INFO] app_logger - Uploading /tmp/video_processing/0-Session 21_ Debt Design.m4a to bucket audio-extract-test (key: 0-Session 21_ Debt Design.m4a)...
+2025-02-18 19:19:19,574 [INFO] app_logger - Successfully uploaded /tmp/video_processing/0-Session 21_ Debt Design.m4a to s3://audio-extract-test/0-Session 21_ Debt Design.m4a
+2025-02-18 19:19:19,587 [INFO] app_logger - Processing video file: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:19:19,591 [INFO] app_logger - Downloading 1-Valeant_ Information Vacuums, Management Credib.mp4 from bucket video-audio-test...
+2025-02-18 19:19:28,171 [INFO] app_logger - Successfully downloaded 1-Valeant_ Information Vacuums, Management Credib.mp4 to /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:19:28,172 [INFO] app_logger - Extracting audio from /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4...
+2025-02-18 19:19:28,529 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.m4a
+2025-02-18 19:19:28,543 [INFO] app_logger - Uploading /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.m4a to bucket audio-extract-test (key: 1-Valeant_ Information Vacuums, Management Credib.m4a)...
+2025-02-18 19:19:33,127 [INFO] app_logger - Successfully uploaded /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.m4a to s3://audio-extract-test/1-Valeant_ Information Vacuums, Management Credib.m4a
+2025-02-18 19:19:33,138 [INFO] app_logger - Processing video file: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:19:33,144 [INFO] app_logger - Downloading 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 from bucket video-audio-test...
+2025-02-18 19:19:46,921 [INFO] app_logger - Successfully downloaded 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 to /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:19:46,922 [INFO] app_logger - Extracting audio from /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4...
+2025-02-18 19:19:47,194 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a
+2025-02-18 19:19:47,207 [INFO] app_logger - Uploading /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a to bucket audio-extract-test (key: 10-Valuation Tools Webcast #6_ Estimating Trailing.m4a)...
+2025-02-18 19:19:51,320 [INFO] app_logger - Successfully uploaded /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a to s3://audio-extract-test/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a
+2025-02-18 19:19:51,327 [INFO] app_logger - Processing video file: 1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:19:51,331 [INFO] app_logger - Downloading 1192-Session 2_ The Objective in Corporate Finance.mp4 from bucket video-audio-test...
+2025-02-18 19:20:42,533 [INFO] app_logger - Successfully downloaded 1192-Session 2_ The Objective in Corporate Finance.mp4 to /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:20:42,605 [INFO] app_logger - Extracting audio from /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4...
+2025-02-18 19:20:43,063 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.m4a
+2025-02-18 19:20:43,077 [INFO] app_logger - Uploading /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.m4a to bucket audio-extract-test (key: 1192-Session 2_ The Objective in Corporate Finance.m4a)...
+2025-02-18 19:20:48,441 [INFO] app_logger - Successfully uploaded /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.m4a to s3://audio-extract-test/1192-Session 2_ The Objective in Corporate Finance.m4a
+2025-02-18 19:20:48,460 [INFO] app_logger - Processing complete.
+2025-02-18 19:27:38,432 [INFO] app_logger - Processing video file: 0-Session 21_ Debt Design.mp4
+2025-02-18 19:27:38,436 [INFO] app_logger - Downloading 0-Session 21_ Debt Design.mp4 from bucket video-audio-test...
+2025-02-18 19:27:50,575 [INFO] app_logger - Successfully downloaded 0-Session 21_ Debt Design.mp4 to /tmp/video_processing/0-Session 21_ Debt Design.mp4
+2025-02-18 19:27:50,577 [INFO] app_logger - Extracting audio from /tmp/video_processing/0-Session 21_ Debt Design.mp4...
+2025-02-18 19:27:50,937 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/0-Session 21_ Debt Design.m4a
+2025-02-18 19:27:50,942 [INFO] app_logger - Uploading /tmp/video_processing/0-Session 21_ Debt Design.m4a to bucket audio-extract-test (key: 0-Session 21_ Debt Design.m4a)...
+2025-02-18 19:27:55,806 [INFO] app_logger - Successfully uploaded /tmp/video_processing/0-Session 21_ Debt Design.m4a to s3://audio-extract-test/0-Session 21_ Debt Design.m4a
+2025-02-18 19:27:55,826 [INFO] app_logger - Processing video file: 1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:27:55,844 [INFO] app_logger - Downloading 1-Valeant_ Information Vacuums, Management Credib.mp4 from bucket video-audio-test...
+2025-02-18 19:28:03,175 [INFO] app_logger - Successfully downloaded 1-Valeant_ Information Vacuums, Management Credib.mp4 to /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4
+2025-02-18 19:28:03,179 [INFO] app_logger - Extracting audio from /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.mp4...
+2025-02-18 19:28:03,313 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.m4a
+2025-02-18 19:28:03,316 [INFO] app_logger - Uploading /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.m4a to bucket audio-extract-test (key: 1-Valeant_ Information Vacuums, Management Credib.m4a)...
+2025-02-18 19:28:07,023 [INFO] app_logger - Successfully uploaded /tmp/video_processing/1-Valeant_ Information Vacuums, Management Credib.m4a to s3://audio-extract-test/1-Valeant_ Information Vacuums, Management Credib.m4a
+2025-02-18 19:28:07,035 [INFO] app_logger - Processing video file: 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:28:07,043 [INFO] app_logger - Downloading 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 from bucket video-audio-test...
+2025-02-18 19:28:17,411 [INFO] app_logger - Successfully downloaded 10-Valuation Tools Webcast #6_ Estimating Trailing.mp4 to /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4
+2025-02-18 19:28:17,413 [INFO] app_logger - Extracting audio from /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.mp4...
+2025-02-18 19:28:17,519 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a
+2025-02-18 19:28:17,532 [INFO] app_logger - Uploading /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a to bucket audio-extract-test (key: 10-Valuation Tools Webcast #6_ Estimating Trailing.m4a)...
+2025-02-18 19:28:21,081 [INFO] app_logger - Successfully uploaded /tmp/video_processing/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a to s3://audio-extract-test/10-Valuation Tools Webcast #6_ Estimating Trailing.m4a
+2025-02-18 19:28:21,097 [INFO] app_logger - Processing video file: 1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:28:21,103 [INFO] app_logger - Downloading 1192-Session 2_ The Objective in Corporate Finance.mp4 from bucket video-audio-test...
+2025-02-18 19:29:07,240 [INFO] app_logger - Successfully downloaded 1192-Session 2_ The Objective in Corporate Finance.mp4 to /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4
+2025-02-18 19:29:07,242 [INFO] app_logger - Extracting audio from /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.mp4...
+2025-02-18 19:29:07,596 [INFO] app_logger - Audio extracted successfully: /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.m4a
+2025-02-18 19:29:07,608 [INFO] app_logger - Uploading /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.m4a to bucket audio-extract-test (key: 1192-Session 2_ The Objective in Corporate Finance.m4a)...
+2025-02-18 19:29:12,446 [INFO] app_logger - Successfully uploaded /tmp/video_processing/1192-Session 2_ The Objective in Corporate Finance.m4a to s3://audio-extract-test/1192-Session 2_ The Objective in Corporate Finance.m4a
+2025-02-18 19:29:12,488 [INFO] app_logger - Processing complete.
