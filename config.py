@@ -1,5 +1,5 @@
-BUCKET_INPUT = "video-audio-test"
-BUCKET_OUTPUT = "audio-extract-test"
+BUCKET_INPUT = "damodaran-youtube-videos"
+BUCKET_OUTPUT = "demodaran-all-audio"
 REGION_NAME = "us-east-1"  # or whichever region your buckets are in
 
 # Local directory path for temporarily storing downloaded video files
