@@ -1,7 +1,4 @@
 import os
-import shutil
-from datetime import datetime  # <-- ADDED
-
 import boto3
 from botocore.exceptions import ClientError
 
@@ -24,67 +21,66 @@ def main():
     # Create an S3 client
     s3_client = boto3.client("s3", region_name=REGION_NAME)
 
-    # List objects (videos) from input bucket
-    try:
-        response = s3_client.list_objects_v2(Bucket=BUCKET_INPUT)
-        if "Contents" not in response:
-            app_logger.warning(f"No objects found in bucket {BUCKET_INPUT}. Exiting...")
-            return
-    except ClientError as e:
-        app_logger.error(f"Failed to list objects in {BUCKET_INPUT}: {e}")
-        return
+    # Use a paginator to list objects in pages from the input bucket
+    paginator = s3_client.get_paginator("list_objects_v2")
+    page_iterator = paginator.paginate(Bucket=BUCKET_INPUT)
 
-    # Iterate over all objects in the bucket
-    for item in response["Contents"]:
-        object_key = item["Key"]
+    page_count = 0
+    for page in page_iterator:
+        page_count += 1
+        app_logger.info(f"Processing page #{page_count}")
 
-        # You might want to skip if object_key is not .mp4:
-        if not object_key.lower().endswith(".mp4"):
-            app_logger.info(f"Skipping non-MP4 file: {object_key}")
+        # If there are no objects (or this page is empty), skip
+        if "Contents" not in page:
+            app_logger.info(f"No objects found in page #{page_count}. Skipping...")
             continue
 
-        app_logger.info(f"Processing video file: {object_key}")
+        # Iterate over all objects in the current page
+        for item in page["Contents"]:
+            object_key = item["Key"]
 
-        # Write a timestamp entry for when processing starts
-        with open("time.txt", "a") as time_file:
-            time_file.write(f"{datetime.now().isoformat()} - START: {object_key}\n")
+            # Skip if the file is not an MP4
+            if not object_key.lower().endswith(".mp4"):
+                app_logger.info(f"Skipping non-MP4 file: {object_key}")
+                continue
 
-        # 1) Download the file
-        local_video_path = download_video_from_s3(BUCKET_INPUT, object_key, app_logger)
-        if not local_video_path:
-            # download_video_from_s3 already logged the error
-            failures_logger.error(f"DOWNLOAD_FAILED: {object_key}")
-            continue
+            app_logger.info(f"Processing video file: {object_key}")
 
-        # 2) Extract audio
-        base_name = os.path.splitext(os.path.basename(object_key))[0]
-        local_audio_filename = base_name + ".m4a"
-        local_audio_path = os.path.join(LOCAL_TEMP_DIR, local_audio_filename)
+            # 1) Download the file
+            local_video_path = download_video_from_s3(BUCKET_INPUT, object_key, app_logger)
+            if not local_video_path:
+                # download_video_from_s3 already logged the error
+                failures_logger.error(f"DOWNLOAD_FAILED: {object_key}")
+                continue
 
-        try:
-            extract_audio(local_video_path, local_audio_path, app_logger)
-        except Exception as e:
-            app_logger.exception(f"Audio extraction failed for {object_key}")
-            failures_logger.error(f"EXTRACTION_FAILED: {object_key}")
-            continue
+            # 2) Extract audio
+            base_name = os.path.splitext(os.path.basename(object_key))[0]
+            local_audio_filename = base_name + ".m4a"
+            local_audio_path = os.path.join(LOCAL_TEMP_DIR, local_audio_filename)
 
-        # 3) Upload audio to output S3 bucket
-        audio_object_key = local_audio_filename
-        uploaded = upload_audio_to_s3(
-            local_audio_path, BUCKET_OUTPUT, audio_object_key, app_logger
-        )
-        if not uploaded:
-            failures_logger.error(f"UPLOAD_FAILED: {object_key}")
+            try:
+                extract_audio(local_video_path, local_audio_path, app_logger)
+            except Exception as e:
+                app_logger.exception(f"Audio extraction failed for {object_key}")
+                failures_logger.error(f"EXTRACTION_FAILED: {object_key}")
+                # Clean up the downloaded video before continuing
+                if os.path.exists(local_video_path):
+                    os.remove(local_video_path)
+                continue
 
-        # 4) Clean up local files to free space
-        if os.path.exists(local_video_path):
-            os.remove(local_video_path)
-        if os.path.exists(local_audio_path):
-            os.remove(local_audio_path)
+            # 3) Upload audio to output S3 bucket
+            audio_object_key = local_audio_filename
+            uploaded = upload_audio_to_s3(
+                local_audio_path, BUCKET_OUTPUT, audio_object_key, app_logger
+            )
+            if not uploaded:
+                failures_logger.error(f"UPLOAD_FAILED: {object_key}")
 
-        # Write a timestamp entry for when processing ends
-        with open("time.txt", "a") as time_file:
-            time_file.write(f"{datetime.now().isoformat()} - END: {object_key}\n")
+            # 4) Clean up local files to free space
+            if os.path.exists(local_video_path):
+                os.remove(local_video_path)
+            if os.path.exists(local_audio_path):
+                os.remove(local_audio_path)
 
     app_logger.info("Processing complete.")
 
