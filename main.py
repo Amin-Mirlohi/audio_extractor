@@ -1,3 +1,4 @@
+
 import os
 import boto3
 from botocore.exceptions import ClientError
@@ -20,6 +21,29 @@ def main():
 
     # Create an S3 client
     s3_client = boto3.client("s3", region_name=REGION_NAME)
+
+    # ----------------------------------------------------------------------------
+    # 1. Gather all already-processed audio keys from the BUCKET_OUTPUT.
+    #    We'll store them in a set so we can skip re-processing.
+    # ----------------------------------------------------------------------------
+    processed_audio_keys = set()
+    try:
+        paginator_out = s3_client.get_paginator("list_objects_v2")
+        page_iterator_out = paginator_out.paginate(Bucket=BUCKET_OUTPUT)
+        for page_out in page_iterator_out:
+            # If the bucket is empty or page is empty, skip
+            if "Contents" not in page_out:
+                continue
+            for obj_out in page_out["Contents"]:
+                # Add the existing audio file name (in lower case) to the set
+                processed_audio_keys.add(obj_out["Key"].lower())
+
+        app_logger.info(
+            f"Found {len(processed_audio_keys)} files already in {BUCKET_OUTPUT}."
+        )
+    except ClientError as e:
+        app_logger.error(f"Error listing objects in output bucket: {e}")
+    # ----------------------------------------------------------------------------
 
     # Use a paginator to list objects in pages from the input bucket
     paginator = s3_client.get_paginator("list_objects_v2")
@@ -44,6 +68,20 @@ def main():
                 app_logger.info(f"Skipping non-MP4 file: {object_key}")
                 continue
 
+            base_name = os.path.splitext(os.path.basename(object_key))[0]
+            local_audio_filename = base_name + ".m4a"
+            audio_object_key = local_audio_filename  # The key we'll use in BUCKET_OUTPUT
+
+            # ----------------------------------------------------------------------------
+            # 2. Check if this audio file has already been processed (exists in BUCKET_OUTPUT)
+            # ----------------------------------------------------------------------------
+            if audio_object_key.lower() in processed_audio_keys:
+                app_logger.info(
+                    f"Audio for {object_key} (would be '{audio_object_key}') "
+                    f"already exists in {BUCKET_OUTPUT}. Skipping..."
+                )
+                continue
+
             app_logger.info(f"Processing video file: {object_key}")
 
             # 1) Download the file
@@ -54,10 +92,7 @@ def main():
                 continue
 
             # 2) Extract audio
-            base_name = os.path.splitext(os.path.basename(object_key))[0]
-            local_audio_filename = base_name + ".m4a"
             local_audio_path = os.path.join(LOCAL_TEMP_DIR, local_audio_filename)
-
             try:
                 extract_audio(local_video_path, local_audio_path, app_logger)
             except Exception as e:
@@ -69,12 +104,15 @@ def main():
                 continue
 
             # 3) Upload audio to output S3 bucket
-            audio_object_key = local_audio_filename
             uploaded = upload_audio_to_s3(
                 local_audio_path, BUCKET_OUTPUT, audio_object_key, app_logger
             )
             if not uploaded:
                 failures_logger.error(f"UPLOAD_FAILED: {object_key}")
+            else:
+                # If uploaded successfully, add it to processed_audio_keys so we
+                # won't process it again if the script runs multiple times.
+                processed_audio_keys.add(audio_object_key.lower())
 
             # 4) Clean up local files to free space
             if os.path.exists(local_video_path):
